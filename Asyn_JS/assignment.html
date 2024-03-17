@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai AUR Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    //     const randomValue = function () {
+    //       document.querySelector('h1').innerHTML = Math.round(Math.random() * 100);
+    //     };
+
+    //     let interValid;
+
+    //     const valueChanger = function () {
+    //       interValid = setInterval(randomValue, 2000);
+    //       console.log('Start');
+    //     };
+
+    //     document.querySelector('#start').addEventListener('click', valueChanger);
+
+    //     document.querySelector('#stop').addEventListener('click', function () {
+    //       clearInterval(interValid); // Clear the interval using the stored ID
+    //       console.log('Stopped');
+    //     });
+
+    const randomValue = () => {
+      document.querySelector('h1').innerHTML = Math.round(Math.random() * 100);
+    };
+
+    let intervalId;
+
+    const startValueChange = () => {
+      intervalId = setInterval(randomValue, 2000);
+      console.log('Program Started');
+    };
+
+    const stopValueChange = () => {
+      clearInterval(intervalId);
+      console.log('Stopped');
+    };
+
+    document
+      .querySelector('#start')
+      .addEventListener('click', startValueChange);
+
+    document.querySelector('#stop').addEventListener('click', stopValueChange);
+
+    //     const sayDate = function (str) {
+    //       console.log(str, Date.now());
+    //     };
+    //     const intervalId = setInterval(sayDate, 1000, 'Amna');
+
+    //     clearInterval(intervalId);
+  </script>
+</html>
